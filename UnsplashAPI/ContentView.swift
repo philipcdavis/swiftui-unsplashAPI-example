@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
+    @ObservedObject var randomImages = UnsplashData()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                LazyVStack {
+                    ForEach(randomImages.photoArray, id: \.id) { photo in
+                        WebImage(url: URL(string: photo.urls["regular"]!))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                }
+            }.navigationBarTitle("Unsplash API")
+        }
     }
 }
 
