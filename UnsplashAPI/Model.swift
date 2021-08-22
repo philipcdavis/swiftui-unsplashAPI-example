@@ -20,8 +20,9 @@ class UnsplashData: ObservableObject {
     }
     
     func loadData() {
+        // Add your Key Here
         let key = "YOUR_KEY_HERE"
-        let url = "https://api.unsplash.com/photos/random/?count=100&client_id=\(key)"
+        let url = "https://api.unsplash.com/photos/random/?count=7&client_id=\(key)"
     
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (data, _, error) in
@@ -31,7 +32,7 @@ class UnsplashData: ObservableObject {
             }
             do {
                 let json = try JSONDecoder().decode([Photo].self, from: data)
-                print(json)
+//                print(json)
                 for photo in json {
                     DispatchQueue.main.async {
                         self.photoArray.append(photo)

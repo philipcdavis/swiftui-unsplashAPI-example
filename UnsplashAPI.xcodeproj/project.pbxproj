@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		48F8DC3A25BF3A77000EFA3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F8DC3925BF3A76000EFA3F /* ContentView.swift */; };
 		48F8DC3E25BF3A84000EFA3F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F8DC3D25BF3A84000EFA3F /* Model.swift */; };
 		48F8DC4225BF3AE3000EFA3F /* UnsplashAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F8DC4125BF3AE3000EFA3F /* UnsplashAPIApp.swift */; };
-		48F8DC4725BF3B20000EFA3F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 48F8DC4625BF3B20000EFA3F /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F8DC4725BF3B20000EFA3F /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +89,6 @@
 			);
 			name = UnsplashAPI;
 			packageProductDependencies = (
-				48F8DC4625BF3B20000EFA3F /* SDWebImageSwiftUI */,
 			);
 			productName = UnsplashAPI;
 			productReference = 48B22E8D25BF370900DE6818 /* UnsplashAPI.app */;
@@ -121,7 +118,6 @@
 			);
 			mainGroup = 48B22E8425BF370800DE6818;
 			packageReferences = (
-				48F8DC4525BF3B20000EFA3F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 48B22E8E25BF370900DE6818 /* Products */;
 			projectDirPath = "";
@@ -284,7 +280,7 @@
 				DEVELOPMENT_TEAM = 78369ZC29J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UnsplashAPI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +302,7 @@
 				DEVELOPMENT_TEAM = 78369ZC29J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UnsplashAPI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,25 +336,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		48F8DC4525BF3B20000EFA3F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		48F8DC4625BF3B20000EFA3F /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 48F8DC4525BF3B20000EFA3F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48B22E8525BF370800DE6818 /* Project object */;
 }

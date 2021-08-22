@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct ContentView: View {
     @ObservedObject var randomImages = UnsplashData()
@@ -15,9 +14,12 @@ struct ContentView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(randomImages.photoArray, id: \.id) { photo in
-                        WebImage(url: URL(string: photo.urls["regular"]!))
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
+                        AsyncImage(url: URL(string: photo.urls["regular"]!)) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            Color.gray.opacity(0.1)
+                        }
                     }
                 }
             }.navigationBarTitle("Unsplash API")
@@ -28,5 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
